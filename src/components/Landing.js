@@ -70,20 +70,13 @@ export default function Landing(props)
  
   return (
    <>
-      <div className="container" style={{color: props.mode==="dark"?"white":"black"}}>
-          <div >
-            <h1>{props.header}</h1>
-            
-          </div>
-         
-          
-
-      </div>
+      
       
       
       <div >
       <div className="container my-3" style={{color: props.mode==="dark"?"white":"black"}}>
-        <h1>Enter today's expense</h1>
+        <h1>Money allowed to spend per day</h1>
+         <h3>{savings/30}</h3>
        
       </div>
            
