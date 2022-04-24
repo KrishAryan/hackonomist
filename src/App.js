@@ -44,7 +44,7 @@ function App() {
   return (
     <>
       <Router>
-      <Navbar title="My Money App" toggleMode={toggleMode} mode={mode} about="About My Money App"/>
+      <Navbar title="My Money App" toggleMode={toggleMode} mode={mode} about="About Finezy"/>
       <Alert alert={alert}/>
       <div className="container my-3">
           <Routes>

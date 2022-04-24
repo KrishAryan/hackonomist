@@ -1,5 +1,6 @@
 import React,{useState} from 'react'
-import { Bar, Pie, Line } from "react-chartjs-2";
+import { Bar, Pie, Line, Doughnut } from "react-chartjs-2";
+
 import {
   Chart,
   ArcElement,
@@ -62,7 +63,7 @@ export default function Landing(props)
 {
   const [RegDate, setRegDate] = useState(new Date());
   const[money,setMoney]=useState(100000)
-  const [expense, setExpense]=useState(2000);
+  const [expense, setExpense]=useState(3000);
   const [savings,setSavings]=useState(5000);
   
   
@@ -74,30 +75,7 @@ export default function Landing(props)
             <h1>{props.header}</h1>
             
           </div>
-          <div className="col-md-6 col-xs-12 form-group">
-                  <label>Monthly Pocket Money :
-                    <div className="tooltip">
-                      
-                      <span className="tooltiptext">Mobile here </span>
-                    </div>
-                  </label>
-                  <input type="text" id="money" name="money" className="form-control" placeholder="Enter Monthly Pocket Money here" required/>
-                  <span className="wrtIcn"><i className="fa fa-pencil-square-o" aria-hidden="true"></i></span>
-                </div>
-
-                <div className="col-md-4 col-xs-12 form-group">
-                  <label>
-                    Date of receiving money :
-                  </label>
-                  <input type="date" id="date" name="date" className="form-control" placeholder="Enter date of receiving money" required/>
-                  <span className="wrtIcn"><i className="fa fa-pencil-square-o" aria-hidden="true"></i></span>
-
-
-                  <span className="wrtIcn">
-                    <i className="fa fa-calendar" aria-hidden="true"></i>
-                  </span>
-                </div>
-          
+         
           
 
       </div>
@@ -106,16 +84,7 @@ export default function Landing(props)
       <div >
       <div className="container my-3" style={{color: props.mode==="dark"?"white":"black"}}>
         <h1>Enter today's expense</h1>
-         <div className="col-md-6 col-xs-12 form-group">
-                  <label>Today's Expense :
-                    <div className="tooltip">
-                      
-                      <span className="tooltiptext">Mobile here </span>
-                    </div>
-                  </label>
-                  <input type="text" id="money2" name="money2" className="form-control" placeholder="Enter todays expense here" required/>
-                  <span className="wrtIcn"><i className="fa fa-pencil-square-o" aria-hidden="true"></i></span>
-                </div>
+       
       </div>
            
           </div>
@@ -124,7 +93,7 @@ export default function Landing(props)
         <div className="col-md-3">
       
                     {/* pie */}
-                    <Pie data={{
+                    <Doughnut data={{
   labels: ["Money Remaining", "Money Spent"],
   datasets: [
     {
@@ -135,6 +104,24 @@ export default function Landing(props)
   ],
 }} />
                   </div>
+      </div>
+      <div className="container my-3" style={{color: props.mode==="dark"?"white":"black"}}>
+        <h1>Expenses Daily</h1>
+       
+      
+               
+                    <Line data={{
+  labels:  [1,2,3,4,5,6,7,8,9,10,11,12,13,14,15,16,17,18,19,20,21,22,23,24,25,26,27,28,29,30],
+  datasets: [
+    {
+      labels: "days",
+      data: [100,0,150,50,200,0,100,0,150,50,200,0,100,0,150,50,200,0,100,0,150,50,200,0,100,0,150,50,200,0 ],
+      backgroundColor: ["#bcf0c6"],
+      hoverOffset: 4
+    },
+  ],
+}} />
+                  
       </div>
             
                   
