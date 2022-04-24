@@ -2,7 +2,7 @@
 import {useState} from "react";
 import './App.css';
 import Navbar from './components/Navbar';
-import TextForm from './components/TextForm';
+import Landing from './components/Landing';
 import About from './components/About';
 import Alert from "./components/Alert";
 import {
@@ -49,7 +49,7 @@ function App() {
       <div className="container my-3">
           <Routes>
               <Route exact path="/about" element={ <About mode={mode}/>}></Route>
-              <Route exact path="/" element={<TextForm header="Enter the text to analyze below" mode={mode} showAlert={showAlert}/>}></Route>
+              <Route exact path="/" element={<Landing header="Enter the details below" mode={mode} showAlert={showAlert}/>}></Route>
           </Routes>
       </div>
       </Router>  

@@ -49,7 +49,7 @@ export default function About(props) {
   <div className="accordion-item" style={myStyle}>
     <h2 className="accordion-header" id="headingTwo">
       <button className="accordion-button collapsed" style={{backgroundColor: props.mode==="dark"?"rgb(28 33 38)":"white",color:props.mode==="dark"?"white":"black"}} type="button" data-bs-toggle="collapse" data-bs-target="#collapseTwo" aria-expanded="false" aria-controls="collapseTwo">
-        <strong>About Text Utilities</strong>
+        <strong>About My money app</strong>
       </button>
     </h2>
     <div id="collapseTwo" className="accordion-collapse collapse" style={{backgroundColor: props.mode==="dark"?"rgb(28 33 38)":"white",color:props.mode==="dark"?"white":"black"}} aria-labelledby="headingTwo" data-bs-parent="#accordionExample">
